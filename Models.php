@@ -20,10 +20,10 @@ Class Friends extends \atk4\data\Model {
     $this -> addField('name');
     $this -> addField('surname');
     $this -> addField('date',['type'=>'date']);
-    $this -> addField('debt');
     $this ->hasOne('client_id',new Client);
-    $this ->hasMany('Loans', new Loans);
-    $this ->hasMany('Loans2', new Loans2);
+    $this ->hasMany('Loans', new Loans) -> addField('total_borrowed',['aggregate'=>'sum','field'=>'sum']);
+    $this ->hasMany('Vozvrat', new Vozvrat) -> addField('total_returned',['aggregate'=>'sum','field' =>'sum']);
+
   }
 }
 
@@ -35,12 +35,14 @@ Class Loans extends \atk4\data\Model {
     $this -> addField('date',['type'=>'date']);
     $this -> hasOne('friends_id',new Friends);
   }
+}
 
-  Class Loans2 extends \atk4\data\Model {
-    public $table ='loans2';
+  Class Vozvrat extends \atk4\data\Model {
+    public $table ='vozvrat';
     Function init() {
       parent:: init();
       $this -> addField('sum',['type'=>'money']);
       $this -> addField('date',['type'=>'date']);
       $this -> hasOne('friends_id',new Friends);
     }
+  }
