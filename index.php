@@ -9,7 +9,7 @@ session_start();
 
 $user = new Client($db);
 $log = $app ->layout ->add('Form');
-$log->setModel(new Client($db));
+$log->setModel(new Client($db),['login','password']);
 $log->buttonSave->set('Enter');
 $log -> onSubmit(function($log) use ($user){
   if (($log->model['login']=='admin') and ($log->model['password']=='admin')) {
