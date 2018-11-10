@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+/*require 'vendor/autoload.php';
 require 'models.php';
 $app = new \atk4\ui\App ('Debts');
 $app->initLayout('Centered');
@@ -26,3 +26,5 @@ $log -> onSubmit(function($log) use ($user){
     return $er;
   }
 });
+*/
+echo 'rabotaet';
