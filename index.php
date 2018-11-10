@@ -1,11 +1,12 @@
 <?php
-/*require 'vendor/autoload.php';
+session_start();
+require 'vendor/autoload.php';
 require 'models.php';
 $app = new \atk4\ui\App ('Debts');
 $app->initLayout('Centered');
 
 
-session_start();
+
 
 $user = new Client($db);
 $log = $app ->layout ->add('Form');
@@ -17,7 +18,7 @@ $log -> onSubmit(function($log) use ($user){
   }
   $user ->TryLoadBy('login',$log ->model['login']);
   if ($user['password'] == $log ->model['password']){
-    $_SESSION['id'] = $user ->id;
+    $_SESSION['id'] = $user->id;
     return new \atk4\ui\jsExpression('document.location="main.php"');
   } else {
     $user ->unload();
@@ -26,5 +27,5 @@ $log -> onSubmit(function($log) use ($user){
     return $er;
   }
 });
-*/
-echo 'rabotaet';
+
+
