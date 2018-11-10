@@ -6,7 +6,7 @@
         }
     },
   "require":{
-    "atk4/ui": "*, dev-develop",
+    "atk4/ui": "*",
     "ext-gd":"*",
     "h4cc/wkhtmltopdf-i386": "*",
     "dropbox/dropbox-sdk": "1.1.*",
