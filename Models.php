@@ -1,10 +1,10 @@
 <?php
 require 'vendor/autoload.php';
-$db = new \atk4\data\Persistence_SQL('mysql:dbname=debts;host=localhost;','sexking','lehaloh');
+$db = new \atk4\data\Persistence_SQL('mysql:dbname=heroku_33a09646a43f60a;host=eu-cdbr-west-02.cleardb.net','b40ba71796d5af','a0bf7181');
 
 
 Class Client extends \atk4\data\Model {
-  public $table ='client';
+  public $table ='client_seva';
   Function init() {
     parent::init();
     $this -> addField('login');
@@ -16,7 +16,7 @@ Class Client extends \atk4\data\Model {
 }
 
 Class Friends extends \atk4\data\Model {
-  public $table ='friends';
+  public $table ='friends_seva';
   Function init() {
     parent:: init();
     $this -> addField('name');
@@ -30,7 +30,7 @@ Class Friends extends \atk4\data\Model {
 }
 
 Class Loans extends \atk4\data\Model {
-  public $table ='loans';
+  public $table ='loans_seva';
   Function init() {
     parent:: init();
     $this -> addField('sum',['type'=>'money']);
@@ -40,7 +40,7 @@ Class Loans extends \atk4\data\Model {
 }
 
   Class Vozvrat extends \atk4\data\Model {
-    public $table ='vozvrat';
+    public $table ='vozvrat_seva';
     Function init() {
       parent:: init();
       $this -> addField('sum',['type'=>'money']);

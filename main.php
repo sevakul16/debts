@@ -36,6 +36,7 @@ $crud -> setModel($friend);
 });*/
 $crud -> addDecorator ('name', new \atk4\ui\TableColumn\Link('gap.php?friends_id={$id}') );
 
+$text =$app -> add(['Text','Add friend by his login']);
 $client_2 = new Client($db);
 $form =$app ->layout ->add('Form');
 $form -> setModel(new Client($db),['login']);
@@ -45,9 +46,10 @@ $form -> onSubmit(function($form) use($client_2,$db) {
   $newFriend['name'] = $client_2['name'];
   $newFriend['surname'] = $client_2['surname'];
   $newFriend['true_friend'] = $client_2 ->id;
+  $newFriend['client_id'] = $_SESSION['id'];
   $newFriend-> save();
   }
-  return $form->succses('Mama I just killed a man');
+  return $form->success('Mama I just killed a man');
 });
 
 //$grid2 = $app->add('Grid');
