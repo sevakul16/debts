@@ -35,7 +35,7 @@ Class Loans extends \atk4\data\Model {
     parent:: init();
     $this -> addField('sum',['type'=>'money']);
     $this -> addField('date',['type'=>'date']);
-    $this -> hasOne('friends_id',new Friends);
+    $this -> hasOne('friends_seva_id',new Friends);
   }
 }
 
@@ -45,6 +45,6 @@ Class Loans extends \atk4\data\Model {
       parent:: init();
       $this -> addField('sum',['type'=>'money']);
       $this -> addField('date',['type'=>'date']);
-      $this -> hasOne('friends_id',new Friends);
+      $this -> hasOne('friends_seva_id',new Friends);
     }
   }
