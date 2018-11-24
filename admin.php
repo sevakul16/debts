@@ -8,8 +8,8 @@ $client = new Client($db);
 $friends = new Friends($db);
 
 
-$grid = $app->add('Crud');
+$grid = $app->add('CRUD');
 $grid->setModel($client);
 
-$grid2 = $app->add('Crud');
+$grid2 = $app->add('CRUD');
 $grid2->setModel($friends);
