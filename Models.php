@@ -21,7 +21,7 @@ Class Friends extends \atk4\data\Model {
     parent:: init();
     $this -> addField('name');
     $this -> addField('surname');
-//    $this -> addField('true_friend');
+    $this -> addField('true_friend');
     $this ->hasOne('client_seva_id',new Client);
     $this ->hasMany('Loans', new Loans) -> addField('total_borrowed',['aggregate'=>'sum','field'=>'sum']);
     $this ->hasMany('Vozvrat', new Vozvrat) -> addField('total_returned',['aggregate'=>'sum','field' =>'sum']);
