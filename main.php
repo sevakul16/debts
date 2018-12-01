@@ -27,7 +27,7 @@ $friend = $client->ref('Friends');
 
 
 
-$crud = $app ->layout ->add('Crud');
+$crud = $app ->layout ->add('CRUD');
 //,'formDefault'=>new UserForm($crud)]
 
 $crud -> setModel($friend);
