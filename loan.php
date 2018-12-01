@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'vendor/autoload.php';
-require 'models.php';
+require 'Models.php';
 $app = new \atk4\ui\App ('Debts');
 $app->initLayout('Centered');
 
@@ -10,10 +10,10 @@ $friends -> load($_SESSION['friends_id']);
 $loans = $friends -> ref('Loans');
 $vozvrat = $friends -> ref('Vozvrat');
 
-$grid = $app ->add('Crud');
+$grid = $app ->add('CRUD');
 $grid -> setModel($loans);
 
-$grid2 = $app ->add('Crud');
+$grid2 = $app ->add('CRUD');
 $grid2 -> setModel($vozvrat);
 
 class ReminderBox extends \atk4\ui\View {
