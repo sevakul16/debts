@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 require 'models.php';
 $app = new \atk4\ui\App ('Debts');
 $app->initLayout('Centered');
-
+/*
 class UserForm extends \atk4\ui\Form {
     function setModel($m, $fields = null) {
         parent::setModel($m, false);
@@ -14,12 +14,12 @@ class UserForm extends \atk4\ui\Form {
         $this->addField('surname');
         $this->addField('date');
       //  $this->addField('client_id');
-        $this -> model['client_id'] = $client->id;
+        $this->model['client_id'] = $client->id;
   //      $m['client_id'] = $client->id;
         return $this->model;
     }
 }
-
+*/
 
 $client = new Client($db);
 $client -> load($_SESSION['id']);
