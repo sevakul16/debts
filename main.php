@@ -46,7 +46,7 @@ $form -> onSubmit(function($form) use($client_2,$db) {
   $newFriend['name'] = $client_2['name'];
   $newFriend['surname'] = $client_2['surname'];
   $newFriend['true_friend'] = $client_2 ->id;
-  $newFriend['client_id'] = $_SESSION['id'];
+  $newFriend['client_seva_id'] = $_SESSION['id'];
   $newFriend-> save();
   }
   return $form->success('Mama I just killed a man');
