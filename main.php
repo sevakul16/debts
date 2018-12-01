@@ -30,7 +30,7 @@ $friend = $client->ref('Friends');
 $crud = $app ->layout ->add('CRUD');
 //,'formDefault'=>new UserForm($crud)]
 
-$crud -> setModel($friend);
+$crud -> setModel($friend,['name','surname']);
 /*$crud-> onSubmit(function($crud){
 
 });*/
